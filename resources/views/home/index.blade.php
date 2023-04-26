@@ -373,180 +373,112 @@
 
         <!-- Resume -->
         <section class="resume-section" id="resume">
-        <div class="container">
-            <p class="text-green fw-semibold">Resume</p>
-            <h2 class="section-title mb-5">My Journey So Far</h2>
-            <div class="row">
-            <!-- Summary -->
-            <div class="col-md-4">
-                <div class="resume-content">
-                <h3 class="resume-title">
-                    <i class="bx bx-book-reader"></i>
-                    Summary
-                </h3>
-                <div class="resume-info">
-                    <div>
-                    <h3 class="resume-name">Muhammad Reza Faturrahman</h3>
-                    <span class="resume-caption">
-                        Studying at BINUS University with a specialization in
-                        Digital Creative Technology. Interested in full stack
-                        developer especially in website designing (UI/UX). Currently
-                        still active as Freshmen Partner in FYP (First Year Program)
-                        Binusian 2026.
-                    </span>
-                    <br />
-                    <span class="resume-contact">
-                        <li>Malang, East Java, Indonesia</li>
-                        <li>+62 81250235831</li>
-                        <li>faturrahman7id@gmail.com</li>
-                    </span>
+            <div class="container">
+                <p class="text-green fw-semibold">Resume</p>
+                <h2 class="section-title mb-5">My Journey So Far</h2>
+                <div class="row">
+                    <!-- Summary -->
+                    <div class="col-md-4">
+                        <div class="resume-content">
+                        <h3 class="resume-title">
+                            <i class="bx bx-book-reader"></i>
+                            Summary
+                        </h3>
+                        <div class="resume-info">
+                            <div>
+                            <h3 class="resume-name">{{$resumesummary->name}}</h3>
+                            <span class="resume-caption">{{$resumesummary->description}}</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="col-md-4">
+                        <div class="resume-content">
+                            <h3 class="resume-title">
+                                <i class="bx bxs-graduation"></i>
+                                Education
+                            </h3>
+                            @foreach ($resumeEducation as $resumeeducation)
+                                <div class="resume-info">
+                                    <div>
+                                        <h3 class="resume-name">{{$resumeeducation->major}}</h3>
+                                        <span class="resume-country">{{$resumeeducation->place}}</span>
+                                        <span class="resume-year">{{$resumeeducation->year}}</span>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="col-md-4">
+                        <div class="resume-content">
+                            <h3 class="resume-title">
+                                <i class="bx bxs-briefcase-alt"></i>
+                                Experience
+                            </h3>
+                            @foreach ($resumeExperience as $resumeexperience)
+                                <div class="resume-info">
+                                    <div>
+                                        <h3 class="resume-name">{{$resumeexperience->experience}}</h3>
+                                        <span class="resume-country">{{$resumeexperience->place}}</span>
+                                        <span class="resume-year">{{$resumeexperience->year}}</span>
+                                        <br />
+                                        <ul>
+                                            <li>{{$resumeexperience->description}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-            <!-- Education -->
-            <div class="col-md-4">
-                <div class="resume-content">
-                <h3 class="resume-title">
-                    <i class="bx bxs-graduation"></i>
-                    Education
-                </h3>
-                <div class="resume-info">
-                    <div>
-                    <h3 class="resume-name">Computer Science</h3>
-                    <span class="resume-country"
-                        >BINUS University - Indonesia</span
-                    >
-                    <span class="resume-year">2021 - Present</span>
-                    </div>
-                </div>
-                <div class="resume-info">
-                    <div>
-                    <h3 class="resume-name">Mathematics and Natural Sciences</h3>
-                    <span class="resume-country"
-                        >SMA Negeri 1 Samarinda - Indonesia
-                    </span>
-                    <span class="resume-year">2018 - 2021</span>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <!-- Experience -->
-            <div class="col-md-4">
-                <div class="resume-content">
-                <h3 class="resume-title">
-                    <i class="bx bxs-briefcase-alt"></i>
-                    Experience
-                </h3>
-                <div class="resume-info">
-                    <div>
-                    <h3 class="resume-name">Freshmen Partner</h3>
-                    <span class="resume-country"
-                        >BINUS University - Indonesia</span
-                    >
-                    <span class="resume-year">2022 - 2023</span>
-                    <br />
-                    <ul>
-                        <li>
-                        Organize and conduct meetings every week to discuss life
-                        in college and provide assignments that build the
-                        mentality and readiness for freshmen
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
         </section>
 
         <!-- Portfolio -->
         <section class="portfolio-section" id="portfolio">
-        <div class="container">
-            <p class="text-green fw-semibold">Portfolio</p>
-            <h2 class="section-title mb-5">Selected Projects</h2>
-            <div class="swiper portfolio-swiper">
-            <div class="swiper-wrapper">
-                <!-- Portfolio Website WiBaKu Candi Badut -->
-                <div class="swiper-slide">
-                <div class="card">
-                    <div class="card-body">
-                    <img
-                        src="assets/images/portfolio/website-candi-badut.jpg"
-                        alt="Website Candi Badut"
-                        class="card-img-top rounded mb-3"
-                    />
-                    <h6 class="fw-semibold">Website Candi Badut</h6>
-                    <a
-                        href="https://wibaku.sinamlab.com/"
-                        target="_blank"
-                        style="text-decoration: none"
-                        class="text-green"
-                    >
-                        Detail Project
-                    </a>
+            <div class="container">
+                <p class="text-green fw-semibold">Portfolio</p>
+                <h2 class="section-title mb-5">Selected Projects</h2>
+                <div class="swiper portfolio-swiper">
+                    <div class="swiper-wrapper">
+                        @foreach ($portfolioProject as $portfolioproject)
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <img
+                                            src="/image/{{$portfolioproject->image}}"
+                                            alt="Image"
+                                            class="card-img-top rounded mb-3"
+                                        />
+                                        <h6 class="fw-semibold">{{$portfolioproject->title}}</h6>
+                                        <a
+                                            href="{{$portfolioproject->link}}"
+                                            target="_blank"
+                                            style="text-decoration: none"
+                                            class="text-green"
+                                        >
+                                            Detail Project
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-                </div>
-                <!-- Portfolio 3D Object Candi Badut -->
-                <div class="swiper-slide">
-                <div class="card">
-                    <div class="card-body">
-                    <img
-                        src="assets/images/portfolio/3d-object-candi-badut.jpg"
-                        alt="3D Object Candi Badut"
-                        class="card-img-top rounded mb-3"
-                    />
-                    <h6 class="fw-semibold">3D Object Candi Badut</h6>
-                    <a
-                        href="https://skfb.ly/ouNzM"
-                        target="_blank"
-                        style="text-decoration: none"
-                        class="text-green"
-                    >
-                        Detail Project
-                    </a>
-                    </div>
-                </div>
-                </div>
-                <!-- Portfolio Lautan Uang Mobile Apps -->
-                <div class="swiper-slide">
-                <div class="card">
-                    <div class="card-body">
-                    <img
-                        src="assets/images/portfolio/lautan-uang-mobile-apps.jpg"
-                        alt="Lautan Uang Mobile Apps"
-                        class="card-img-top rounded mb-3"
-                    />
-                    <h6 class="fw-semibold">Lautan Uang Mobile Apps</h6>
-                    <a
-                        href="https://github.com/rezafatur/Lautan-Uang-Mobile-App"
-                        target="_blank"
-                        style="text-decoration: none"
-                        class="text-green"
-                    >
-                        Detail Project
-                    </a>
-                    </div>
-                </div>
-                </div>
-            </div>
 
-            <div class="d-flex align-items-center justify-content-end gap-3 mt-3">
-                <button
-                class="btn btn-light d-flex align-items-center justify-content-center btn-prev"
-                >
-                <i class="bx bx-left-arrow-alt fs-5"></i>
-                </button>
-                <button
-                class="btn btn-light d-flex align-items-center justify-content-center btn-next"
-                >
-                <i class="bx bx-right-arrow-alt fs-5"></i>
-                </button>
+                <div class="d-flex align-items-center justify-content-end gap-3 mt-3">
+                    <button class="btn btn-light d-flex align-items-center justify-content-center btn-prev">
+                        <i class="bx bx-left-arrow-alt fs-5"></i>
+                    </button>
+                    <button class="btn btn-light d-flex align-items-center justify-content-center btn-next">
+                        <i class="bx bx-right-arrow-alt fs-5"></i>
+                    </button>
+                </div>
             </div>
-            </div>
-        </div>
         </section>
 
         <!-- Contact -->
