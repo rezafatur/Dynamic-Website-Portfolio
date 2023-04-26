@@ -121,7 +121,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <li class="nav-item">
                                         <a href="/skills-other" class="nav-link">
                                             <i class="fas fa-solid fa-award nav-icon"></i>
-                                            <p>Skills - others</p>
+                                            <p>Skills - Others</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
