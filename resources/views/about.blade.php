@@ -126,7 +126,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Image Currently</label>
-                    <input type="file" class="form-control" name="imagefrom">
+                    <input type="file" class="form-control" name="imagecurrently">
                 </div>
                 @error('imagecurrently')
                 <p style="color: red; font-size: small">{{$message}}</p>
