@@ -98,21 +98,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="/home" class="nav-link">
+                    <a href="/header" class="nav-link">
                       <i class="fas fa-solid fa-house-user nav-icon"></i>
-                      <p>Home</p>
+                      <p>Header</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/about-me" class="nav-link">
+                    <a href="/about" class="nav-link">
                       <i class="fas fa-solid fa-user nav-icon"></i>
                       <p>About Me</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="/skills" class="nav-link">
+                    <a href="/skills-frontend" class="nav-link">
                       <i class="fas fa-solid fa-award nav-icon"></i>
-                      <p>Skills</p>
+                      <p>Skills - Frontend</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/skills-backend" class="nav-link">
+                      <i class="fas fa-solid fa-award nav-icon"></i>
+                      <p>Skills - Backend</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/skills-other" class="nav-link">
+                      <i class="fas fa-solid fa-award nav-icon"></i>
+                      <p>Skills - others</p>
                     </a>
                   </li>
                   <li class="nav-item">
@@ -161,7 +173,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Starter Page</h1>
+                <h1 class="m-0">@yield('title')</h1>
               </div>
             </div>
             <!-- /.row -->
