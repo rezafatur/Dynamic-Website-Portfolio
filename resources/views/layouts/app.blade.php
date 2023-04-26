@@ -155,7 +155,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/contact" class="nav-link">
+                                        <a href="/others" class="nav-link">
                                             <i class="fas fa-solid fa-dot-circle nav-icon"></i>
                                             <p>Others</p>
                                         </a>
@@ -169,7 +169,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/logout" class="nav-link">
                                     <i class="nav-icon fas fas fa-solid fa-sign-out-alt"></i>
                                     <p>Logout</p>
                                 </a>

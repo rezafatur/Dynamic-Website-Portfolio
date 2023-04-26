@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OthersController;
 use App\Http\Controllers\PortfolioProjectController;
 use App\Http\Controllers\ResumeEducationController;
 use App\Http\Controllers\ResumeExperienceController;
@@ -47,3 +49,11 @@ Route::resource('resume-experience', ResumeExperienceController::class)->middlew
 
 // Portfolio
 Route::resource('portfolio-project', PortfolioProjectController::class)->middleware('auth');
+
+// Contact
+Route::get('/contact', [ContactController::class, 'index'])->middleware('auth');
+Route::put('/contact/{id}', [ContactController::class, 'update'])->middleware('auth');
+
+// Others
+Route::get('/others', [OthersController::class, 'index'])->middleware('auth');
+Route::put('/others/{id}', [OthersController::class, 'update'])->middleware('auth');

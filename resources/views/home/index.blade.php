@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Muhammad Reza Faturrahman</title>
+        <title>{{$others->pagename}}</title>
 
         <link rel="stylesheet" href="assets/css/style.css" />
         <link
@@ -22,7 +22,7 @@
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg bg-white">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">Reza</a>
+                <a class="navbar-brand fw-bold" href="#">{{$others->navbarname}}</a>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -258,7 +258,7 @@
                     <img
                     class="card-img"
                     src="/image/{{$about->imagefrom}}"
-                    alt="Kota Samarinda"
+                    alt="From Image"
                     />
                     <div class="card-img-overlay">
                     <h5>From</h5>
@@ -275,7 +275,7 @@
                     <img
                         class="card-img"
                         src="/image/{{$about->imagecurrently}}"
-                        alt="Kota Malang"
+                        alt="Currently In Image"
                     />
                     <div class="card-img-overlay">
                         <h5>Currently In</h5>
@@ -483,95 +483,90 @@
 
         <!-- Contact -->
         <section class="contact-section" id="contact">
-        <div class="container">
-            <p class="text-green fw-semibold">Contact</p>
-            <h2 class="section-title mb-5">Let's Work Together.</h2>
-            <div class="row">
-            <div class="col-md-4">
-                <div class="contact-content">
-                <h3 class="contact-title">
-                    <i class="bx bxs-chat"></i>
-                    Talk to Me
-                </h3>
-                <div class="contact-info">
-                    <div class="contact-data">
-                    <i class="bx bxs-envelope"></i>
-                    <h4 class="contact-data-title">Email</h4>
-                    <span class="contact-data-info"
-                        >faturrahman7id@gmail.com</span
-                    >
+            <div class="container">
+                <p class="text-green fw-semibold">Contact</p>
+                <h2 class="section-title mb-5">Let's Work Together.</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="contact-content">
+                            <h3 class="contact-title">
+                                <i class="bx bxs-chat"></i>
+                                Talk to Me
+                            </h3>
+                            <div class="contact-info">
+                                <div class="contact-data">
+                                    <i class="bx bxs-envelope"></i>
+                                    <h4 class="contact-data-title">Email</h4>
+                                    <span class="contact-data-info">{{$contact->email}}</span>
+                                </div>
+                                <div class="contact-data">
+                                    <i class="bx bxs-phone"></i>
+                                    <h4 class="contact-data-title">Phone</h4>
+                                    <span class="contact-data-info">{{$contact->phone}}</span>
+                                </div>
+                                <div class="contact-data">
+                                    <i class="bx bxs-map"></i>
+                                    <h4 class="contact-data-title">Location</h4>
+                                    <span class="contact-data-info">{{$contact->location}}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-data">
-                    <i class="bx bxs-phone"></i>
-                    <h4 class="contact-data-title">Phone</h4>
-                    <span class="contact-data-info">+62 81250235831</span>
-                    </div>
-                    <div class="contact-data">
-                    <i class="bx bxs-map"></i>
-                    <h4 class="contact-data-title">Location</h4>
-                    <span class="contact-data-info"
-                        >Malang, East Java, Indonesia</span
-                    >
+                    <div class="col-md-8">
+                        <div class="contact-content">
+                            <h3 class="contact-title">
+                                <i class="bx bxs-send"></i>
+                                Get in Touch
+                            </h3>
+                            <form action="" class="contact-form" id="contact-form">
+                                <div class="contact-form-div">
+                                    <label class="contact-form-tag">Fullname</label>
+                                    <input
+                                        type="text"
+                                        name="user_name"
+                                        required
+                                        placeholder="Your Fullname"
+                                        class="contact-form-input"
+                                        id="contact-name"
+                                    />
+                                </div>
+                                <div class="contact-form-div">
+                                    <label class="contact-form-tag">Email</label>
+                                    <input
+                                        type="email"
+                                        name="user_email"
+                                        required
+                                        placeholder="Your Email"
+                                        class="contact-form-input"
+                                        id="contact-email"
+                                    />
+                                </div>
+                                <div class="contact-form-div contact-form-area">
+                                    <label class="contact-form-tag">Message</label>
+                                    <textarea
+                                        name="user_message"
+                                        required
+                                        placeholder="Your Message"
+                                        class="contact-form-input"
+                                        id="contact-message"
+                                    ></textarea>
+                                </div>
+                                <p class="contact-check" id="contact-check"></p>
+                                <button type="submit" class="contact-button">Submit</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-            <div class="col-md-8">
-                <div class="contact-content">
-                <h3 class="contact-title">
-                    <i class="bx bxs-send"></i>
-                    Get in Touch
-                </h3>
-                <form action="" class="contact-form" id="contact-form">
-                    <div class="contact-form-div">
-                    <label class="contact-form-tag">Fullname</label>
-                    <input
-                        type="text"
-                        name="user_name"
-                        required
-                        placeholder="Your Fullname"
-                        class="contact-form-input"
-                        id="contact-name"
-                    />
-                    </div>
-                    <div class="contact-form-div">
-                    <label class="contact-form-tag">Email</label>
-                    <input
-                        type="email"
-                        name="user_email"
-                        required
-                        placeholder="Your Email"
-                        class="contact-form-input"
-                        id="contact-email"
-                    />
-                    </div>
-                    <div class="contact-form-div contact-form-area">
-                    <label class="contact-form-tag">Message</label>
-                    <textarea
-                        name="user_message"
-                        required
-                        placeholder="Your Message"
-                        class="contact-form-input"
-                        id="contact-message"
-                    ></textarea>
-                    </div>
-                    <p class="contact-check" id="contact-check"></p>
-                    <button type="submit" class="contact-button">Submit</button>
-                </form>
-                </div>
-            </div>
-            </div>
-        </div>
         </section>
 
         <!-- Footer -->
         <footer class="py-3">
-        <div class="container">
-            <p class="text-white text-center fs-7 mb-0">
-            &copy; Copyright 2023
-            <span class="fw-bold">Muhammad Reza Faturrahman</span>
-            </p>
-        </div>
+            <div class="container">
+                <p class="text-white text-center fs-7 mb-0">&copy; Copyright 2023
+                    <span class="fw-bold">{{$others->copyrightname}}</span>
+                </p>
+            </div>
         </footer>
 
         <!-- Bootstrap Framework -->

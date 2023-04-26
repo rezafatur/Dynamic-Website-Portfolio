@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Header;
 use App\Models\About;
+use App\Models\Contact;
+use App\Models\Others;
 use App\Models\Portfolio;
 use App\Models\PortfolioProject;
 use App\Models\ResumeEducation;
@@ -27,6 +29,8 @@ class HomeController extends Controller
         $resumeEducation = ResumeEducation::all();
         $resumeExperience = ResumeExperience::all();
         $portfolioProject = PortfolioProject::all();
+        $contact = Contact::first();
+        $others = Others::first();
 
         return view('home.index', compact(
             'header',
@@ -37,7 +41,9 @@ class HomeController extends Controller
             'resumesummary',
             'resumeEducation',
             'resumeExperience',
-            'portfolioProject'
+            'portfolioProject',
+            'contact',
+            'others'
         ));
     }
 }
